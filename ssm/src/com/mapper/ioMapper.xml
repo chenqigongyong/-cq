@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.inter.ioMapper">
+  <!-- User表 -->
+  <resultMap id="UserResultMap" type="com.model.User" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="userName" property="username" jdbcType="VARCHAR" />
+    <result column="userAge" property="userage" jdbcType="INTEGER" />
+    <result column="userAddress" property="useraddress" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  <select id="getAllUser" resultMap="UserResultMap" resultType="User">
+        select * from d_user
+  </select>
+  
+  
+  
+</mapper>
